@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data credits & coverage · Atmos</title><meta name="description" content="Atmos weather app support, privacy and data credits from OVERNA Technologies."><style>*{box-sizing:border-box}body{margin:0;background:#252b2e;color:#eef2f3;font:17px/1.65 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:40px 24px}a{color:#d4ed42}nav{display:flex;gap:24px;flex-wrap:wrap;border-bottom:1px solid #536063;padding-bottom:20px}h1{font-size:2.5rem;line-height:1.15}h2,h4{color:#d4ed42;font-size:1.2rem;margin-top:32px}li{margin:8px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}.muted,footer{color:#b7c2c5}footer{border-top:1px solid #536063;margin-top:40px;padding-top:20px}</style></head><body><main><nav><a href="./">Atmos support</a><a href="privacy.html">Privacy</a><a href="sources.html">Data credits & coverage</a></nav><h1>Data credits & coverage</h1><p>Atmos 0.4.0 uses the following public sources. Availability and coverage vary by location.</p><pre>Atmos 0.4 — data credits and coverage
+Publisher: OVERNA Technologies · jordan@overna.io
+Reviewed October 9, 2026
+
+MET NORWAY
+Weather forecast data: Norwegian Meteorological Institute (MET Norway),
+Locationforecast, licensed under Creative Commons Attribution 4.0 International.
+https://api.met.no/doc/License
+https://creativecommons.org/licenses/by/4.0/
+https://api.met.no/weatherapi/locationforecast/2.0/documentation
+Atmos converts units and documented weather symbols, groups timestamps by local
+calendar day and computes extrema of available samples. These are adaptations,
+not official MET daily extrema. Solar times are calculated locally with SunCalc.
+Forecast periods remain one or six hours; no hourly interpolation is invented.
+Roughly nine days replace the previous sixteen. Missing probability, gusts,
+visibility, rain/snow partition and all-sky UV are not synthesized. Clear-sky UV
+is not substituted for all-sky UV. Partial days lack daily precipitation totals.
+The service's Expires / Last-Modified headers control caching and conditional
+requests. Applications exceeding 20 aggregate requests/second need an agreement;
+higher traffic may require a caching proxy. This app includes no paid proxy.
+https://api.met.no/doc/TermsOfService
+
+GEONAMES
+City and time-zone metadata: GeoNames, CC BY 4.0. See the bundled geonames.txt
+notice for the processed snapshot, attribution, adaptations and input checksums.
+
+NASA POWER
+The data were obtained from the NASA Langley Research Center POWER Project
+funded through the NASA Earth Science Directorate Applied Science Program.
+https://power.larc.nasa.gov/docs/referencing/
+https://power.larc.nasa.gov/docs/methodology/data/sources/
+Daily meteorology uses MERRA-2 / GEOS-IT at 0.5° latitude × 0.625° longitude.
+Atmos requests UTC days and converts wind units. Coverage starts in 1981,
+replacing the previous 1940 ERA5 start. Gridded values are not local station
+measurements. Recent publication lags; historic values can be revised. The data
+record can span different models, which matters for climate-trend analysis.
+
+NOAA / NATIONAL WEATHER SERVICE
+https://www.weather.gov/disclaimer
+The NOAA/NWS material identified here is public-domain government information,
+not subject to Atmos copyright. Atmos-rendered maps, labels and unit conversions
+must not be understood as unaltered official government products. NWS source
+bulletins and CPC graphics retain their issuing identity and dates.
+Products: US alerts, observations, forecasts and discussions; CONUS MRMS radar;
+NEXRAD radial velocity; NDFD weather fields; GOES Americas infrared; NHC tropical
+tracks, cones, wind footprints and advisories; CPC extended outlooks.
+NOAA-derived lightning density is distributed by nowCOAST as a Level 5 product
+appropriate for public distribution. It incorporates NLDN / GLD360 inputs; the
+underlying commercial network feed is not provided by Atmos.
+https://nowcoast.noaa.gov/geoserver/observations/lightning_detection/ows?service=WMS&amp;request=GetCapabilities
+Tropical model tracks are limited to NOAA GFS / GEFS and selected NOAA hurricane
+model aids identified in NHC's techlist. Foreign and multi-center consensus
+models are excluded. A model track is not the official NHC forecast.
+https://ftp.nhc.noaa.gov/atcf/docs/nhc_techlist.dat
+
+IOWA ENVIRONMENTAL MESONET
+NOAA HRRR regional simulated reflectivity, and published storm/rotation feeds.
+https://mesonet.agron.iastate.edu/disclaimer.php
+IEM data are available for lawful use under its public-domain policy.
+The 18-hour HRRR timeline uses the published completed-run marker and 15-minute
+steps. Atmos renders provider imagery; it does not create forecast values or
+extend model coverage. Rotation markers are not tornado confirmations.
+
+ATMOSTORM / NOAA GOES GLM
+https://atmostorm.com/api-docs
+Atmostorm public API: CC0; attribution requested and provided here and on maps.
+https://creativecommons.org/publicdomain/zero/1.0/
+Satellite lightning flashes retain the feed's times and geographic limits.
+Public request limits apply. Satellite flashes are not ground-strike locations.
+
+CALTRANS
+https://dot.ca.gov/conditions-of-use
+https://cwwp2.dot.ca.gov/documentation/cctv/cctv.htm
+Camera catalogs and stills: California Department of Transportation (Caltrans),
+districts 3, 4, 7 and 11. Images can be unavailable or delayed. Retrieval time
+is not a verified capture time. No affiliation or endorsement is implied.
+
+BASEMAP
+© OpenStreetMap contributors, Open Database License (ODbL).
+https://www.openstreetmap.org/copyright
+Cartography: OpenMapTiles. Tile service: OpenFreeMap.
+https://openmaptiles.org/  https://openfreemap.org/
+Attribution is displayed on the map. Basemaps provide reference geography.
+
+LIMITS OF THIS VERSION
+No global modeled AQI, numeric 30-day ensemble/quantile export, correlation
+coefficient radar, global wind particles, global infrared mosaic, GFS future-radar
+extension, or cameras outside the selected California districts. Observed radar
+is CONUS. Recent 48-hour history uses nearby US station reports, not a global
+model archive; reports may be incomplete and prior-hour rainfall values overlap.
+CPC extended graphics remain, but are not substitutes for numeric ensembles.
+
+All sources can be delayed or unavailable. Check issue times and coverage.
+Use official authorities for emergency instructions. Atmos does not provide
+background emergency notification delivery. Data providers and software authors
+do not endorse Atmos. Provider terms can change; no unlimited-capacity or
+perpetual availability guarantee is made.
+</pre><footer>© 2026 OVERNA Technologies · <a href="mailto:jordan@overna.io">jordan@overna.io</a></footer></main></body></html>
